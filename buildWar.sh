@@ -1,5 +1,7 @@
 #!/bin/bash
 
+$MODE="test"
+
 if [[ $MODE == "test" ]] ; then
  echo "test mode, loading test.properties"
  cp -f $PROJECT/$PROJECT/src/main/webapp/WEB-INF/test.properties $PROJECT/$PROJECT/src/main/webapp/WEB-INF/config.properties
