@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "We are at $PWD"
+
 $MODE="test"
 
 if [[ $MODE == "test" ]] ; then
@@ -14,12 +16,15 @@ mvn compile -f $PROJECT/$PROJECT
 
 mvn package -f $PROJECT/$PROJECT
 
+ls -l
+
 rm -rf webapps
 
 mkdir webapps
 
 cp $PROJECT/$PROJECT/target/$PROJECT-1.0.0.war webapps/ROOT.war
 
-echo $PWD
+ls -l webapps/
+
 
 
