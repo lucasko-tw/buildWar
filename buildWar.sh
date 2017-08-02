@@ -4,7 +4,7 @@ cd /tmp
 
 echo "We are at $PWD"
 
-$MODE="test"
+MODE="test"
 
 if [[ $MODE == "test" ]] ; then
  echo "test mode, loading test.properties"
