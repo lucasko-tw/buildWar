@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /tmp
+
 echo "We are at $PWD"
 
 $MODE="test"
