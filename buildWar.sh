@@ -8,15 +8,15 @@ MODE="test"
 
 if [[ $MODE == "test" ]] ; then
  echo "test mode, loading test.properties"
- cp -f $PROJECT/$PROJECT/src/main/webapp/WEB-INF/test.properties $PROJECT/$PROJECT/src/main/webapp/WEB-INF/config.properties
+ cp -f $PROJECT/src/main/webapp/WEB-INF/test.properties $PROJECT/src/main/webapp/WEB-INF/config.properties
 
 fi
 
-cat  $PROJECT/$PROJECT/src/main/webapp/WEB-INF/config.properties
+cat  $PROJECT/src/main/webapp/WEB-INF/config.properties
 
-mvn compile -f $PROJECT/$PROJECT
+mvn compile -f $PROJECT
 
-mvn package -f $PROJECT/$PROJECT
+mvn package -f $PROJECT
 
 ls -l
 
@@ -24,7 +24,7 @@ rm -rf webapps
 
 mkdir webapps
 
-cp $PROJECT/$PROJECT/target/$PROJECT-1.0.0.war webapps/ROOT.war
+cp $PROJECT/target/$PROJECT-1.0.0.war webapps/ROOT.war
 
 ls -l webapps/
 
